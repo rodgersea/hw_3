@@ -1,5 +1,4 @@
-// this is the array of character the function will pull from at the end
-var base = [];
+
 
 // the four variables below are the four banks of characters to pull from
 var lower = "abcdefghijklmnopqrstuvwxyz"
@@ -14,28 +13,38 @@ numeric = numeric.split("");
 var special = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 special = special.split("");
 
+// complete list of chars
 var poolSet = [lower, upper, numeric, special];
 
-// ask the user which of the four character types to pool from
-// concatenate variable called choose with the boolean values
+// ask the user which of the four char types to pool from
+// concatenate variable called choose using the returned boolean values
 btn1.onclick = function() {
     var choose = [];
 
     var one = confirm("include lowercase?");
-    choose = choose.concat(one);
+        choose = choose.concat(one);
     var two = confirm("include uppercase?");
-    choose = choose.concat(two);
+        choose = choose.concat(two);
     var three = confirm("include numeric?");
-    choose = choose.concat(three);
+        choose = choose.concat(three);
     var four = confirm("include special?");
-    choose = choose.concat(four);
+        choose = choose.concat(four);
 
 // find password length, require 0-8 with if else
-    var five = prompt("how long? 8-128 characters");
-    if ((five < 9) || (five > 128)) {
+
+var five = prompt("how long? 8-128 characters");
+    do {
         alert("size limit 8-128");
-        five = prompt("how long? 8-128 characters");
+        var five = prompt("how long? 8-128 characters");
     }
+    while ((five < 9) || (five > 128)) 
+    
+
+    // var five = prompt("how long? 8-128 characters");
+    // if ((five < 9) || (five > 128)) {
+    //     alert("size limit 8-128");
+    //     five = prompt("how long? 8-128 characters");
+    // }
     // console.log(five);
     // console.log(choose);
 
