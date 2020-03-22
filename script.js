@@ -42,24 +42,12 @@ generate.onclick = function() {
     choose = choose.concat(four);
 
     var five = prompt("how long? 8-128 characters");
-    console.log(five);
     if (five === null) {
         return;
-    }
-
-    do {
+    } else if ((five < 8) || (five > 128)) {
         alert("number must be between 8-128");
         five = prompt("how long? 8-128 characters");
-        if (five === null) {
-            return;
-        }
-    } while ((five < 8) || (five > 128));
-
-
-
-    // do {
-    //     alert("password must be between 8-128 characters");
-    // } while ((five != "null") || ((five < 9) || (five > 128)))
+    }
     
     // console.log(five);
     // console.log(choose);
