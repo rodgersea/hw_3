@@ -22,22 +22,18 @@ generate.onclick = function() {
 
     var one = confirm("include lowercase?");
     if (one == false) {
-        return;
     }
     choose = choose.concat(one);
     var two = confirm("include uppercase?");
     if (two == false) {
-        return;
     }
     choose = choose.concat(two);
     var three = confirm("include numeric?");
     if (three == false) {
-        return;
     }
     choose = choose.concat(three);
     var four = confirm("include special?");
     if (four == false) {
-        return;
     }
     choose = choose.concat(four);
 
